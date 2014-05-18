@@ -1,10 +1,7 @@
-require './modules/phucket/phucket.coffee'
-
-
-php = require './modules/tg/php/php.coffee'
-apache2 = require './modules/tg/apache2/apache2.coffee'
-composer = require './modules/tg/composer/composer.coffee'
-symfony = require './modules/tg/symfony/symfony.coffee'
+php = load 'tg:php'
+apache2 = load 'tg:apache2'
+composer = load 'tg:composer'
+symfony = load 'tg:symfony'
 
 #cmd.execute "sudo apt-get update"
 
@@ -19,6 +16,7 @@ symfony = require './modules/tg/symfony/symfony.coffee'
 
 (new composer)
   .ensureInstalled()
+
 ###
 (new symfony)
   .ensureInstalled()

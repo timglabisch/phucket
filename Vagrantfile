@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      vb.customize ["modifyvm", :id, "--memory", "4096"]
   end
 
-  config.vm.provision :shell, :path => "phucket.sh"
+  config.vm.provision :shell, :path => ".phucket/phucket/phucket.sh"
 
 
 end
