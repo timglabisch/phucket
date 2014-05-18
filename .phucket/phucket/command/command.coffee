@@ -12,7 +12,7 @@ module.exports = class
   execute: (command) ->
     result = execSync.exec command
 
-    if result.code != 0
+    if result.code not in [0, 100]
       console.log "ERR:  " + result.stdout
 
     return result.code

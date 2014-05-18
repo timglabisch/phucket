@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.ssh.forward_agent = true
 
   config.vm.synced_folder "./", "/vagrant"
-  config.vm.synced_folder "./", "/var/www"
+  config.vm.synced_folder "./", "/var/www", type: "nfs"
 
   config.vm.provider "virtualbox" do |vb|
      # Don't boot with headless mode

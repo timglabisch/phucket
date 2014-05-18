@@ -6,6 +6,7 @@
   "dependencies": {
     "execSync": "~1.0.1-pre",
     "coffee-script": "1.7.1",
-    "twig": "~0.7.1"
+    "twig": "~0.7.1",
+    "merge": "~1.1.3"
   }
 }

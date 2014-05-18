@@ -1,7 +1,7 @@
 module.exports = class
 
   ensureInstalled: ->
-    ['php5-cli', 'php5-dev', 'php5-intl'].map (v) -> pack.installed v
+    ['php5', 'php5-cli', 'php5-dev', 'php5-intl'].map (v) -> pack.installed v
     @
 
   _ensurePhpIni: (file, obj) ->
