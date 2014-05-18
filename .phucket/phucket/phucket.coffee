@@ -11,4 +11,4 @@ GLOBAL.templ = new (load 'phucket:template')
 
 GLOBAL.pack.installed "curl"
 
-require __dirname + "/../../provisioner"
+require __dirname + "/../phucket"
