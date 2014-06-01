@@ -19,7 +19,7 @@ module.exports = class
     cmd.execute('service ' + name + ' stop')
 
   reload: (name) ->
-    if isRunning name
+    if @isRunning name
       log.info "service reload " + name
       cmd.execute('service ' + name + ' reload')
     else

@@ -4,6 +4,10 @@ module.exports = class
     ['php5', 'php5-cli', 'php5-dev', 'php5-intl'].map (v) -> pack.installed v
     @
 
+  ensureModulesInstalled: (modules) ->
+    pack.installed 'php5-' + module for module in modules
+    @
+
   _ensurePhpIni: (file, obj) ->
     templ.ensureTemplate
       path: '/etc/php5/' + file + '.ini'

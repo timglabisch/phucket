@@ -13,6 +13,6 @@ module.exports = class
     result = execSync.exec command
 
     if result.code not in [0, 100]
-      console.log "ERR:  " + result.stdout
+      log.debug "ERR:  " + result.stdout
 
     return result.code
