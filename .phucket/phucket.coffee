@@ -1,10 +1,14 @@
+
 php = load 'tg:php'
+
 apache2 = load 'tg:apache2'
 composer = load 'tg:composer'
 def = load 'tg:default'
 symfony = load 'tg:symfony'
 xdebug = load 'tg:xdebug'
 mysql = load 'tg:mysql'
+mongodb = foo 'tg:mongodb'
+
 
 #cmd.execute "sudo apt-get update"
 
@@ -34,3 +38,6 @@ mysql = load 'tg:mysql'
 (new mysql)
   .ensureInstalled()
   .ensureDatabase('dev')
+
+(mongodb)
+  .ensureInstalled()

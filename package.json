@@ -1,0 +1,13 @@
+{
+  "name": "fooo",
+  "version": "0.1.0",
+  "description": "fuu",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "~3.7.0",
+    "gulp-shell": "~0.2.5",
+    "exec-sync": "~0.1.6",
+    "execSync": "~1.0.1-pre",
+    "node-watch": "~0.3.4"
+  }
+}
