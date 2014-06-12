@@ -1,43 +1,32 @@
 
-php = load 'tg:php'
+# Example manifest to build a LAMP Stack.
 
-apache2 = load 'tg:apache2'
-composer = load 'tg:composer'
-def = load 'tg:default'
-symfony = load 'tg:symfony'
-xdebug = load 'tg:xdebug'
-mysql = load 'tg:mysql'
-mongodb = foo 'tg:mongodb'
-
-
-#cmd.execute "sudo apt-get update"
-
-(new apache2)
+o 'tg:apache2'
   .ensureInstalled()
   .ensureModPhp()
   .ensureVHost 'SomeVHost',
     attributes:
       DocumentRoot: '/var/www/web'
 
-(new php)
+o 'tg:php'
   .ensureInstalled()
   .ensurePhpIniCli()
   .ensureModulesInstalled ['mysql']
   .ensureFpm()
 
-(new xdebug)
+o 'tg:xdebug'
   .ensureInstalled()
   .ensureConfiguration()
 
-(new composer)
+o 'tg:composer'
   .ensureInstalled()
 
-(new def)
+o 'tg:default'
   .ensureInstalled()
 
-(new mysql)
+o 'tg:mysql'
   .ensureInstalled()
   .ensureDatabase('dev')
 
-(mongodb)
+o 'tg:mongodb'
   .ensureInstalled()
